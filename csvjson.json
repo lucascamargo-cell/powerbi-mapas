@@ -1,0 +1,3662 @@
+[
+  {
+    "Unidade": "ABC",
+    "cidade": "DIADEMA",
+    "UF": "SP",
+    "subregiao": "ABC01"
+  },
+  {
+    "Unidade": "ABC",
+    "cidade": "SANTO ANDRE",
+    "UF": "SP",
+    "subregiao": "ABC02"
+  },
+  {
+    "Unidade": "ABC",
+    "cidade": "MAUA",
+    "UF": "SP",
+    "subregiao": "ABC03"
+  },
+  {
+    "Unidade": "ABC",
+    "cidade": "SAO BERNARDO DO CAMPO",
+    "UF": "SP",
+    "subregiao": "ABC04"
+  },
+  {
+    "Unidade": "ABC",
+    "cidade": "RIBEIRAO PIRES",
+    "UF": "SP",
+    "subregiao": "ABC05"
+  },
+  {
+    "Unidade": "ABC",
+    "cidade": "RIO GRANDE DA SERRA",
+    "UF": "SP",
+    "subregiao": "ABC06"
+  },
+  {
+    "Unidade": "ABC",
+    "cidade": "SAO CAETANO DO SUL",
+    "UF": "SP",
+    "subregiao": "ABC07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BAURU",
+    "UF": "SP",
+    "subregiao": "BAU01"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PIRATININGA",
+    "UF": "SP",
+    "subregiao": "BAU01"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "AREALVA",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BARIRI",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BORACEIA",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BORBOREMA",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BOREBI",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "IACANGA",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "IBITINGA",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ITAJU",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ITAPOLIS",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PONGAI",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "REGINOPOLIS",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "URU",
+    "UF": "SP",
+    "subregiao": "BAU02"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "AVAI",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BALBINOS",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CAFELANDIA",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CANITAR",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GETULINA",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GUAICARA",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GUAIMBE",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GUARANTA",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GUARICANGA",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "LINS",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PIRAJUI",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PRESIDENTE ALVES",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PROMISSAO",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SABINO",
+    "UF": "SP",
+    "subregiao": "BAU03"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BARRA BONITA",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BOCAINA",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BROTAS",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "DOIS CORREGOS",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "IGARACU DO TIETE",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ITAPUI",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "JAU",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "MINEIROS DO TIETE",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PEDERNEIRAS",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SANTA MARIA DA SERRA",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "TORRINHA",
+    "UF": "SP",
+    "subregiao": "BAU04"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ALVARO DE CARVALHO",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ALVINLANDIA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CABRALIA PAULISTA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "DUARTINA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "FERNAO",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GALIA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "GARCA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "JULIO MESQUITA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "LUCIANOPOLIS",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "LUPERCIO",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "MARILIA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "OCAUCU",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PAULISTANIA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "POMPEIA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "UBIRAJARA",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "VERA CRUZ",
+    "UF": "SP",
+    "subregiao": "BAU05"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "AGUDOS",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ANHEMBI",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "AREIOPOLIS",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BOFETE",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BOTUCATU",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ITATINGA",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "LENCOIS PAULISTA",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "MACATUBA",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PARDINHO",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PRATANIA",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SAO MANUEL",
+    "UF": "SP",
+    "subregiao": "BAU06"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "AGUAS DE SANTA BARBARA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ARANDU",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "AVARE",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BARAO DE ANTONINA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CERQUEIRA CESAR",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CORONEL MACEDO",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "FARTURA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "IARAS",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ITAI",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ITAPORANGA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "MANDURI",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "OLEO",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PARANAPANEMA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PIRAJU",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "RIVER SUL",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SARUTAIA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "TAGUAI",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "TAQUARITUBA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "TEJUPA",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "TIMBURI",
+    "UF": "SP",
+    "subregiao": "BAU07"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "BERNARDINO DE CAMPOS",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CAMPOS NOVOS PAULISTA",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "CHAVANTES",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "DOMELIA",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "ESPIRITO SANTO DO TURVO",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "IBIRAREMA",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "IPAUSSU",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "OURINHOS",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "PALMITAL",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "RIBEIRAO DO SUL",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SALTO GRANDE",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SANTA CRUZ DO RIO PARDO",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "BAU",
+    "cidade": "SAO PEDRO DO TURVO",
+    "UF": "SP",
+    "subregiao": "BAU08"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CAMPINAS",
+    "UF": "SP",
+    "subregiao": "CPS01"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "BRAGANCA PAULISTA",
+    "UF": "SP",
+    "subregiao": "CPS03"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MORUNGABA",
+    "UF": "SP",
+    "subregiao": "CPS03"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "PEDRA BELA",
+    "UF": "SP",
+    "subregiao": "CPS03"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "PINHALZINHO",
+    "UF": "SP",
+    "subregiao": "CPS03"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "TUIUTI",
+    "UF": "SP",
+    "subregiao": "CPS03"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ATIBAIA",
+    "UF": "SP",
+    "subregiao": "CPS04"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "BOM JESUS DOS PERDOES",
+    "UF": "SP",
+    "subregiao": "CPS04"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "IGARATA",
+    "UF": "SP",
+    "subregiao": "CPS04"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "JARINU",
+    "UF": "SP",
+    "subregiao": "CPS04"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "NAZARE PAULISTA",
+    "UF": "SP",
+    "subregiao": "CPS04"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ARTUR NOGUEIRA",
+    "UF": "SP",
+    "subregiao": "CPS05"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CONCHAL",
+    "UF": "SP",
+    "subregiao": "CPS05"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "COSMOPOLIS",
+    "UF": "SP",
+    "subregiao": "CPS05"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ENGENHEIRO COELHO",
+    "UF": "SP",
+    "subregiao": "CPS05"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "PAULINIA",
+    "UF": "SP",
+    "subregiao": "CPS05"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "NOVA ODESSA",
+    "UF": "SP",
+    "subregiao": "CPS06"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SUMARE",
+    "UF": "SP",
+    "subregiao": "CPS06"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "JUNDIAI",
+    "UF": "SP",
+    "subregiao": "CPS07"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "LOUVEIRA",
+    "UF": "SP",
+    "subregiao": "CPS08"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "VALINHOS",
+    "UF": "SP",
+    "subregiao": "CPS08"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "VINHEDO",
+    "UF": "SP",
+    "subregiao": "CPS08"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CAPIVARI",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CERQUILHO",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ELIAS FAUSTO",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "HORTOLANDIA",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "JUMIRIM",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "LARANJAL PAULISTA",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MOMBUCA",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MONTE MOR",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "RAFARD",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "TIETE",
+    "UF": "SP",
+    "subregiao": "CPS09"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "AMERICANA",
+    "UF": "SP",
+    "subregiao": "CPS11"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SANTA BARBARA D OESTE",
+    "UF": "SP",
+    "subregiao": "CPS11"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ARARAS",
+    "UF": "SP",
+    "subregiao": "CPS12"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "IRACEMAPOLIS",
+    "UF": "SP",
+    "subregiao": "CPS12"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "LEME",
+    "UF": "SP",
+    "subregiao": "CPS12"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "LIMEIRA",
+    "UF": "SP",
+    "subregiao": "CPS12"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SANTA CRUZ DA CONCEICAO",
+    "UF": "SP",
+    "subregiao": "CPS12"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CORDEIROPOLIS",
+    "UF": "SP",
+    "subregiao": "CPS13"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CORUMBATAI",
+    "UF": "SP",
+    "subregiao": "CPS13"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "IPEUNA",
+    "UF": "SP",
+    "subregiao": "CPS13"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "RIO CLARO",
+    "UF": "SP",
+    "subregiao": "CPS13"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SANTA GERTRUDES",
+    "UF": "SP",
+    "subregiao": "CPS13"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ALBERTINA",
+    "UF": "SP",
+    "subregiao": "CPS14"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ESPIRITO SANTO DO PINHAL",
+    "UF": "SP",
+    "subregiao": "CPS14"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ITAPIRA",
+    "UF": "SP",
+    "subregiao": "CPS14"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "JACUTINGA",
+    "UF": "SP",
+    "subregiao": "CPS14"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "AGUAS DE LINDOIA",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "AMPARO",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "JAGUARIUNA",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "LINDOIA",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MONTE ALEGRE DO SUL",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MONTE SIAO",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "PEDREIRA",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SERRA NEGRA",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SOCORRO",
+    "UF": "SP",
+    "subregiao": "CPS15"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ESTIVA GERBI",
+    "UF": "SP",
+    "subregiao": "CPS16"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "HOLAMBRA",
+    "UF": "SP",
+    "subregiao": "CPS16"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MOGI GUACU",
+    "UF": "SP",
+    "subregiao": "CPS16"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MOGI MIRIM",
+    "UF": "SP",
+    "subregiao": "CPS16"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SANTO ANTONIO DE POSSE",
+    "UF": "SP",
+    "subregiao": "CPS16"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ANDRADAS",
+    "UF": "MG",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CALDAS",
+    "UF": "MG",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "IBITIURA DE MINAS",
+    "UF": "MG",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "IPUIUNA",
+    "UF": "MG",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "POCOS DE CALDAS",
+    "UF": "MG",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SANTA RITA DE CALDAS",
+    "UF": "MG",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SANTO ANTONIO DO JARDIM",
+    "UF": "SP",
+    "subregiao": "CPS17"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "EXTREMA",
+    "UF": "MG",
+    "subregiao": "CPS18"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "JOANOPOLIS",
+    "UF": "SP",
+    "subregiao": "CPS18"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MUNHOZ",
+    "UF": "MG",
+    "subregiao": "CPS18"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "PIRACAIA",
+    "UF": "SP",
+    "subregiao": "CPS18"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "TOLEDO",
+    "UF": "MG",
+    "subregiao": "CPS18"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "VARGEM",
+    "UF": "SP",
+    "subregiao": "CPS18"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "BOM REPOUSO",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CAMANDUCAIA",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CAMBUI",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CONSOLACAO",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CORREGO DO BOM JESUS",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "COSTAS",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ESTIVA",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "GONCALVES",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ITAPEVA",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "MONTE VERDE",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "PONTE SEGURA",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SENADOR AMARAL",
+    "UF": "MG",
+    "subregiao": "CPS19"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CAJAMAR",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CAMPO LIMPO PAULISTA",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "INDAIATUBA",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ITU",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ITUPEVA",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "SALTO",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "VARZEA PAULISTA",
+    "UF": "SP",
+    "subregiao": "CPS20"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "CABREUVA",
+    "UF": "SP",
+    "subregiao": "CPS21"
+  },
+  {
+    "Unidade": "CPS",
+    "cidade": "ITATIBA",
+    "UF": "SP",
+    "subregiao": "CPS21"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "PRAIA GRANDE",
+    "UF": "SP",
+    "subregiao": "LIT01"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "BERTIOGA",
+    "UF": "SP",
+    "subregiao": "LIT02"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "GUARUJA",
+    "UF": "SP",
+    "subregiao": "LIT02"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "SANTOS",
+    "UF": "SP",
+    "subregiao": "LIT02"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "SAO VICENTE",
+    "UF": "SP",
+    "subregiao": "LIT02"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "CUBATAO",
+    "UF": "SP",
+    "subregiao": "LIT03"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "ITANHAEM",
+    "UF": "SP",
+    "subregiao": "LIT04"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "ITARIRI",
+    "UF": "SP",
+    "subregiao": "LIT04"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "MONGAGUA",
+    "UF": "SP",
+    "subregiao": "LIT04"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "PERUIBE",
+    "UF": "SP",
+    "subregiao": "LIT04"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "BARRA DO TURVO",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "CAJATI",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "CANANEIA",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "ELDORADO",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "IGUAPE",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "ILHA COMPRIDA",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "JACUPIRANGA",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "JUQUIA",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "MIRACATU",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "PARIQUERA ACU",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "PEDRO DE TOLEDO",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "REGISTRO",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "LIT",
+    "cidade": "SETE BARRAS",
+    "UF": "SP",
+    "subregiao": "LIT05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PRESIDENTE PRUDENTE",
+    "UF": "SP",
+    "subregiao": "PPB01"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ORIENTE",
+    "UF": "SP",
+    "subregiao": "PPB02"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ADAMANTINA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ALFREDO MARCONDES",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "BASTOS",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "DRACENA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "FLORA RICA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "FLORIDA PAULISTA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "INUBIA PAULISTA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "IRAPURU",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "JUNQUEIROPOLIS",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "LUCELIA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "MARIAPOLIS",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "MONTE CASTELO",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "NOVA GUATAPORANGA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "OURO VERDE",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PACAEMBU",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PANAROMA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PANORAMA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PAULICEIA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PRACINHA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SAGRES",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SANTA MERCEDES",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SANTO ANASTACIO",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SANTO EXPEDITO",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SAO JOAO DO PAU D'ALHO",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "TUPI PAULISTA",
+    "UF": "SP",
+    "subregiao": "PPB03"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ARCO IRIS",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "BORA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "CAIABU",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "HERCULANDIA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "IACRI",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "INDIANA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "JOAO RAMALHO",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "LUTECIA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "MARTINOPOLIS",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "OSCAR BRESSANE",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "OSVALDO CRUZ",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PARAGUACU PAULISTA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PARAPUA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "QUATA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "QUEIROZ",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "QUINTANA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "RANCHARIA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "REGENTE FEIJO",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "RINOPOLIS",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SALMOURAO",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "TUPA",
+    "UF": "SP",
+    "subregiao": "PPB05"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ALVARES MACHADO",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "CAIUA",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "EMILIANOPOLIS",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ESTRELA DO NORTE",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "EUCLIDES DA CUNHA",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "MARABA PAULISTA",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "MIRANTE DO PARANAPANEMA",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "NARANDIBA",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PIQUEROBI",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PIRAPOZINHO",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PRESIDENTE BERNARDES",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PRESIDENTE EPITACIO",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PRESIDENTE VENCESLAU",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "RIBEIRAO DOS INDIOS",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "SANDOVALIA",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "TARABAI",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "TEODORO SAMPAIO",
+    "UF": "SP",
+    "subregiao": "PPB06"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ANHUMAS",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ASSIS",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "CANDIDO MOTA",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "IEPE",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "NANTES",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PLATINA",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "TACIBA",
+    "UF": "SP",
+    "subregiao": "PPB07"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "CRUZALIA",
+    "UF": "SP",
+    "subregiao": "PPB08"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "ECHAPORA",
+    "UF": "SP",
+    "subregiao": "PPB08"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "FLORINEA",
+    "UF": "SP",
+    "subregiao": "PPB08"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "MARACAI",
+    "UF": "SP",
+    "subregiao": "PPB08"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "PEDRINHAS PAULISTA",
+    "UF": "SP",
+    "subregiao": "PPB08"
+  },
+  {
+    "Unidade": "PPB",
+    "cidade": "TARUMA",
+    "UF": "SP",
+    "subregiao": "PPB08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "RIBEIRAO PRETO",
+    "UF": "SP",
+    "subregiao": "RAO01"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ANALANDIA",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BOA ESPERANCA DO SUL",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "DOURADO",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "IBATE",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ITAQUERI DA SERRA",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ITIRAPINA",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "RIBEIRAO BONITO",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO CARLOS",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TRABIJU",
+    "UF": "SP",
+    "subregiao": "RAO02"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "AGUAI",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CASA BRANCA",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CRAVINHOS",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "DESCALVADO",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "LUIS ANTONIO",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PIRASSUNUNGA",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PORTO FERREIRA",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTA CRUZ DAS PALMEIRAS",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTA RITA DO PASSA QUATRO",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTA ROSA DE VITERBO",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO SIMAO",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TAMBAU",
+    "UF": "SP",
+    "subregiao": "RAO03"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ALTINOPOLIS",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BATATAIS",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BRODOWSKI",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "JARDINOPOLIS",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PONTAL",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTO ANTONIO DA ALEGRIA",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SERRA AZUL",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SERRANA",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SERTAOZINHO",
+    "UF": "SP",
+    "subregiao": "RAO04"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "AGUAS DA PRATA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CACONDE",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CAJURU",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CASSIA DOS COQUEIROS",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "DIVINOLANDIA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ITOBI",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MOCOCA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTA CRUZ DA ESPERANCA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO JOAO DA BOA VISTA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO JOSE DO RIO PARDO",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO SEBASTIAO DA GRAMA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TAPIRATIBA",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "VARGEM GRANDE DO SUL",
+    "UF": "SP",
+    "subregiao": "RAO05"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ARAMINA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BURITIZAL",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CLARAVAL",
+    "UF": "MG",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CRISTAIS PAULISTA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "FRANCA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "GUARA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "IGARAPAVA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ITIRAPUA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ITUVERAVA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "JERIQUARA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MIGUELOPOLIS",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MORRO AGUDO",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "NUPORANGA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ORLANDIA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PATROCINIO PAULISTA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PEDREGULHO",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "RESTINGA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "RIBEIRAO CORRENTE",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "RIFAINA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SALES OLIVEIRA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO JOAQUIM DA BARRA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SAO JOSE DA BELA VISTA",
+    "UF": "SP",
+    "subregiao": "RAO06"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BARRINHA",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "CANDIDO RODRIGUES",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "DUMONT",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "FERNANDO PRESTES",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "GUARIBA",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "JABOTICABAL",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MONTE ALTO",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PRADOPOLIS",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTA ERNESTINA",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TAIACU",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TAIUVA",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TAQUARAL",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TAQUARITINGA",
+    "UF": "SP",
+    "subregiao": "RAO07"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BARRETOS",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "BEBEDOURO",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "COLINA",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "GUAIRA",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "IPUA",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "JABORANDI",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MONTE AZUL PAULISTA",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "PITANGUEIRAS",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TERRA ROXA",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "VIRADOURO",
+    "UF": "SP",
+    "subregiao": "RAO08"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "AMERICO BRASILIENSE",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "ARARAQUARA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "DOBRADA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "GAVIAO PEIXOTO",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "GUATAPARA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MATAO",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "MOTUCA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "NOVA EUROPA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "RINCAO",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "SANTA LUCIA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "RAO",
+    "cidade": "TABATINGA",
+    "UF": "SP",
+    "subregiao": "RAO09"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "PALMEIRAS DE SAO JOSE",
+    "UF": "SP",
+    "subregiao": "SJK01"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SAO JOSE DOS CAMPOS",
+    "UF": "SP",
+    "subregiao": "SJK01"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "ILHABELA",
+    "UF": "SP",
+    "subregiao": "SJK02"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "JAMBEIRO",
+    "UF": "SP",
+    "subregiao": "SJK02"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "PARAIBUNA",
+    "UF": "SP",
+    "subregiao": "SJK02"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SAO SEBASTIAO",
+    "UF": "SP",
+    "subregiao": "SJK02"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "CARAGUATATUBA",
+    "UF": "SP",
+    "subregiao": "SJK03"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "LAGOINHA",
+    "UF": "SP",
+    "subregiao": "SJK03"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "NATIVIDADE DA SERRA",
+    "UF": "SP",
+    "subregiao": "SJK03"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "REDENCAO DA SERRA",
+    "UF": "SP",
+    "subregiao": "SJK03"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SAO LUIZ DO PARAITINGA",
+    "UF": "SP",
+    "subregiao": "SJK03"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "UBATUBA",
+    "UF": "SP",
+    "subregiao": "SJK03"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "TAUBATE",
+    "UF": "SP",
+    "subregiao": "SJK04"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "CAMPOS DO JORDAO",
+    "UF": "SP",
+    "subregiao": "SJK05"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "MONTEIRO LOBATO",
+    "UF": "SP",
+    "subregiao": "SJK05"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SANTO ANTONIO DO PINHAL",
+    "UF": "SP",
+    "subregiao": "SJK05"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SAO BENTO DO SAPUCAI",
+    "UF": "SP",
+    "subregiao": "SJK05"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SAPUCAI MIRIM",
+    "UF": "SP",
+    "subregiao": "SJK05"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "GUARAREMA",
+    "UF": "SP",
+    "subregiao": "SJK06"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SALESOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJK06"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SANTA BRANCA",
+    "UF": "SP",
+    "subregiao": "SJK06"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "JACAREI",
+    "UF": "SP",
+    "subregiao": "SJK07"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "CACAPAVA",
+    "UF": "SP",
+    "subregiao": "SJK08"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "PINDAMONHANGABA",
+    "UF": "SP",
+    "subregiao": "SJK08"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "TREMEMBE",
+    "UF": "SP",
+    "subregiao": "SJK08"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SANTANA DO CAPIVARI",
+    "UF": "SP",
+    "subregiao": "SJK09"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SAO SEBASTIAO DO RIO VERDE",
+    "UF": "SP",
+    "subregiao": "SJK09"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "ARUJA",
+    "UF": "SP",
+    "subregiao": "SJK10"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "BIRITIBA MIRIM",
+    "UF": "SP",
+    "subregiao": "SJK10"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "MOGI DAS CRUZES",
+    "UF": "SP",
+    "subregiao": "SJK10"
+  },
+  {
+    "Unidade": "SJK",
+    "cidade": "SANTA ISABEL",
+    "UF": "SP",
+    "subregiao": "SJK10"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ESTRELA D OESTE",
+    "UF": "SP",
+    "subregiao": "SJP01"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GASTAO VIDIGAL",
+    "UF": "SP",
+    "subregiao": "SJP01"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PARANAPUA",
+    "UF": "SP",
+    "subregiao": "SJP01"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PINDORAMA",
+    "UF": "SP",
+    "subregiao": "SJP01"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SAO JOSE DO RIO PRETO",
+    "UF": "SP",
+    "subregiao": "SJP01"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BALSAMO",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CAJOBI",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ELISARIO",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "EMBAUBA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GUAPIACU",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GUARACI",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ICEM",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "IPIGUA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "IRAPUA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "JOSE BONIFACIO",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MAGDA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "META BARRETOS",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MIRASSOL",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MONTE APRAZILVEL",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVA CANAA PAULISTA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "OLIMPIA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ONDA VERDE",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ORINDIUVA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PONTES GESTAL",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "POTIRENDABA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTANA DA PONTE PENSA",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "TANABI",
+    "UF": "SP",
+    "subregiao": "SJP02"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SEVERINIA",
+    "UF": "SP",
+    "subregiao": "SJP03"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NEVES PAULISTA",
+    "UF": "SP",
+    "subregiao": "SJP04"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NIPOA",
+    "UF": "SP",
+    "subregiao": "SJP05"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ZACARIAS",
+    "UF": "SP",
+    "subregiao": "SJP06"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ALTO ALEGRE",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ANDRADINA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "AVANHANDAVA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BARBOSA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BENTO DE ABREU",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BILAC",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BIRIGUI",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BRAUNA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BREJO ALEGRE",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CASTILHO",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CLEMENTINA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "COROADOS",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GABRIEL MONTEIRO",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GLICERIO",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GUARACAI",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GUARARAPES",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ITAPURA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "LAVINIA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "LOURDES",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "LUIZIANIA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MIRANDOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MURUTINGA DO SUL",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVA INDEPENDENCIA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PENAPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PIACATU",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "RUBIACEA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTO ANTONIO DO ARACANGUA",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTOPOLIS DO AGUAPEI",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "VALPARAISO",
+    "UF": "SP",
+    "subregiao": "SJP07"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BURITAMA",
+    "UF": "SP",
+    "subregiao": "SJP08"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GENERAL SALGADO",
+    "UF": "SP",
+    "subregiao": "SJP09"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVA CASTILHO",
+    "UF": "SP",
+    "subregiao": "SJP10"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PEREIRA BARRETO",
+    "UF": "SP",
+    "subregiao": "SJP11"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ALTAIR",
+    "UF": "SP",
+    "subregiao": "SJP12"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVA GRANADA",
+    "UF": "SP",
+    "subregiao": "SJP13"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PALESTINA",
+    "UF": "SP",
+    "subregiao": "SJP15"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "APARECIDA D OESTE",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ASPASIA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "AURIFLAMA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "DIRCE REIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "DOLCINOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "FERNANDOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GUZOLANDIA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ILHA SOLTEIRA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "INDIAPORA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "JALES",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MACEDONIA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MARINOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MERIDIANO",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MESOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MIRA ESTRELA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NHANDEARA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVA LUZITANIA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "OUROESTE",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PALMEIRA D OESTE",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PEDRANOPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PONTALINDA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "POPULINA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "RUBINEIA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTA ALBERTINA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTA FE DO SUL",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTA RITA D OESTE",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTA SALETE",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SAO FRANCISCO",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SAO JOAO DAS DUAS PONTES",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SUD MENNUCCI",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SUZANAPOLIS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "TRES FRONTEIRAS",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "TURIUBA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "TURMALINA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "URANIA",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "VITORIA BRASIL",
+    "UF": "SP",
+    "subregiao": "SJP16"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ALVARES FLORENCE",
+    "UF": "SP",
+    "subregiao": "SJP17"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "GUARANI D OESTE",
+    "UF": "SP",
+    "subregiao": "SJP18"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ADOLFO",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "BADY BASSIT",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "FLOREAL",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "JACI",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MACAUBAL",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MIRASSOLANDIA",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MONCOES",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PLANALTO",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "RIOLANDIA",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SAO JOAO DE IRACEMA",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SEBASTIANOPOLIS DO SUL",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "VOTUPORANGA",
+    "UF": "SP",
+    "subregiao": "SJP19"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "AMERICO DE CAMPOS",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CARDOSO",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "COSMORAMA",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PARISI",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PAULO DE FARIA",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "POLONI",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTA CLARA D OESTE",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "VALENTIM GENTIL",
+    "UF": "SP",
+    "subregiao": "SJP20"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ARIRANHA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CATANDUVA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CATIGUA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CEDRAL",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "IBIRA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ITAJOBI",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MARAPOAMA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MARICA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "MENDONCA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVA ALIANCA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVO HORIZONTE",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PALMARES PAULISTA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PARAISO",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PINDORAMA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "PIRANGI",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SALES",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "SANTA ALDEIA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "TABAPUA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "UBARANA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "UCHOA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "UNIAO PAULISTA",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "URUPES",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "VISTA ALEGRE DO ALTO",
+    "UF": "SP",
+    "subregiao": "SJP21"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "NOVAIS",
+    "UF": "SP",
+    "subregiao": "SJP22"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "CONFIALE",
+    "UF": "SP",
+    "subregiao": "SJP23"
+  },
+  {
+    "Unidade": "SJP",
+    "cidade": "ARACATUBA",
+    "UF": "SP",
+    "subregiao": "SJP24"
+  },
+  {
+    "Unidade": "SPC",
+    "cidade": "SAO PAULO",
+    "UF": "SP",
+    "subregiao": "SPC01"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "GUARULHOS",
+    "UF": "SP",
+    "subregiao": "SPL01"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "MAIRIPORA",
+    "UF": "SP",
+    "subregiao": "SPL02"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "CAIEIRAS",
+    "UF": "SP",
+    "subregiao": "SPL03"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "FRANCO DA ROCHA",
+    "UF": "SP",
+    "subregiao": "SPL04"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "FRANCISCO MORATO",
+    "UF": "SP",
+    "subregiao": "SPL05"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "FERRAZ DE VASCONCELOS",
+    "UF": "SP",
+    "subregiao": "SPL07"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "ITAQUAQUECETUBA",
+    "UF": "SP",
+    "subregiao": "SPL07"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "POA",
+    "UF": "SP",
+    "subregiao": "SPL07"
+  },
+  {
+    "Unidade": "SPL",
+    "cidade": "SUZANO",
+    "UF": "SP",
+    "subregiao": "SPL07"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "OSASCO",
+    "UF": "SP",
+    "subregiao": "SPO01"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "CARAPICUIBA",
+    "UF": "SP",
+    "subregiao": "SPO02"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "BARUERI",
+    "UF": "SP",
+    "subregiao": "SPO03"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "SANTANA DE PARNAIBA",
+    "UF": "SP",
+    "subregiao": "SPO04"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "PIRAPORA DO BOM JESUS",
+    "UF": "SP",
+    "subregiao": "SPO05"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "JANDIRA",
+    "UF": "SP",
+    "subregiao": "SPO06"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "ITAPEVI",
+    "UF": "SP",
+    "subregiao": "SPO07"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "COTIA",
+    "UF": "SP",
+    "subregiao": "SPO08"
+  },
+  {
+    "Unidade": "SPO",
+    "cidade": "VARGEM GRANDE PAULISTA",
+    "UF": "SP",
+    "subregiao": "SPO10"
+  },
+  {
+    "Unidade": "SPS",
+    "cidade": "TABOAO DA SERRA",
+    "UF": "SP",
+    "subregiao": "SPS01"
+  },
+  {
+    "Unidade": "SPS",
+    "cidade": "EMBU DAS ARTES",
+    "UF": "SP",
+    "subregiao": "SPS02"
+  },
+  {
+    "Unidade": "SPS",
+    "cidade": "EMBU GUACU",
+    "UF": "SP",
+    "subregiao": "SPS03"
+  },
+  {
+    "Unidade": "SPS",
+    "cidade": "ITAPECERICA DA SERRA",
+    "UF": "SP",
+    "subregiao": "SPS03"
+  },
+  {
+    "Unidade": "SPS",
+    "cidade": "JUQUITIBA",
+    "UF": "SP",
+    "subregiao": "SPS03"
+  },
+  {
+    "Unidade": "SPS",
+    "cidade": "SAO LOURENCO DA SERRA",
+    "UF": "SP",
+    "subregiao": "SPS03"
+  }
+]
