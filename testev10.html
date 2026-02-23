@@ -235,13 +235,13 @@ function criarConteudoPopup(layer) {
   var nomeNorm = normalizarNome(nomeMuniOriginal);
   var dados = dictMunicipios[nomeNorm];
   
-  var rota = (dados && dados.subregiao) ? dados.subregiao : "Sem Rota";
+  var rota = (dados && dados.subregiao) ? dados.subregiao : "Sem Rota";a
   var unidade = (dados && dados.unidade) ? dados.unidade : "Não Cadastrada";
   
   return `<b>Unidade:</b> ${unidade}<br><b>Rota:</b> ${rota}<br><b>Município:</b> ${nomeMuniOriginal}`;
 }
 
-fetch("SP_Municipios__FeaturesToJSO.geojson")
+fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/SP_Municipios__FeaturesToJSO.geojson")
 .then(res => res.json())
 .then(data => {
   camadaMunicipios = L.geoJSON(data, {
