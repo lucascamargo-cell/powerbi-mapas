@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Painel Mapa Teste</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+<style>
+  html, body { 
+    margin: 0; 
+    padding: 0;
+    height: 100vh; 
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f9; 
+    display: flex;
+    flex-direction: column; 
+    overflow: hidden; 
+  }
+  
+  h3 { margin: 15px 15px 10px 15px; color: #333; }
+  
+  .controles { 
+    margin: 0 15px 15px 15px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    align-items: center; 
+    background: white; 
+    padding: 10px; 
+    border-radius: 6px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+  }
+  select { padding: 6px; border: 1px solid #ccc; border-radius: 4px; }
+  button { padding: 6px 12px; cursor: pointer; background-color: #e2e8f0; border: 1px solid #cbd5e1; border-radius: 4px; color: #334155; font-weight: bold; }
+  button:hover { background-color: #cbd5e1; }
+  .grupo-filtro { display: flex; align-items: center; gap: 5px; margin-right: 15px; }
+
+  .container-principal {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1; 
+    margin: 0 15px 15px 15px;
+    min-height: 0; 
+  }
+
+  #map { 
+    flex-grow: 1; 
+    border-radius: 6px; 
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  #painel-lateral {
+    width: 280px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    overflow-y: auto; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: none; 
+    box-sizing: border-box;
+  }
+
+  #painel-lateral h4 { margin: 15px 0 5px 0; color: #333; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+  #painel-lateral ul { list-style-type: none; padding: 0; margin: 0; }
+  #painel-lateral li { padding: 4px 0; font-size: 13px; color: #555; border-bottom: 1px dashed #f0f0f0; }
+  #painel-lateral li:last-child { border-bottom: none; }
+</style>
+</head>
+<body>
+
+<h3>Painel de Unidades e Rotas (Subregiões) - SP</h3>
+
+<div class="controles">
+  <div class="grupo-filtro">
+    <select id="filtroUF">
+      <option value="">Selecione a UF</option>
+      <option value="SP">SP</option>
+    </select>
+    <button id="btnLimparUF">Limpar UF</button>
+  </div>
+
+  <div class="grupo-filtro">
+    <select id="filtroUnidade">
+      <option value="">Selecione uma unidade</option>
+    </select>
+    <button id="btnLimparUnidade">Limpar Unidade</button>
+  </div>
+
+  <div class="grupo-filtro">
+    <select id="filtroSubregiao">
+      <option value="">Selecione uma rota/subregião</option>
+    </select>
+    <button id="btnLimparSubregiao">Limpar Rota</button>
+  </div>
+
+  <div class="grupo-filtro">
+    <select id="filtroMunicipio">
+      <option value="">Selecione um município</option>
+    </select>
+    <button id="btnLimparMunicipio">Limpar Município</button>
+  </div>
+</div>
+
+<div class="container-principal">
+  <div id="map"></div>
+
+  <div id="painel-lateral">
+    <h3 style="margin: 0; padding-bottom: 10px; border-bottom: 2px solid #ccc;">Lista de Cidades</h3>
+    <div id="conteudo-painel"></div>
+  </div>
+</div>
+
+<script>
+
+var dictMunicipios = {};
+
+function normalizarNome(nome) {
+  if(!nome) return "";
+  return nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+}
+
+fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/refs/heads/main/csvjson.json")
+  .then(res => res.json())
+  .then(dadosPlanilha => {
+    dadosPlanilha.forEach(d => {
+      dictMunicipios[normalizarNome(d.cidade)] = {
+        subregiao: d.subregiao,
+        unidade: d.Unidade
+      };
+    });
+  })
+  .catch(err => console.error("Erro ao carregar csvjson.json", err));
+
+var map = L.map('map').setView([-22.5, -48], 7);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+var camadaMunicipios;
+var camadaUnidades;
+
+var campoNomeMun = "NM_MUN";
+var listaTodosMunicipios = []; 
+var listaTodasUnidades = [
+  "SPO","SPS","CPS","GRU","RAO","SPC","ABC",
+  "SOD","BAU","SPL","SJK","LIT","LRE","SJP","PPB"
+];
+
+var paletaCores = [
+  "#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231",
+  "#911eb4", "#46f0f0", "#f032e6", "#bcf60c", "#fabebe",
+  "#008080", "#e6beff", "#9a6324", "#fffac8", "#800000",
+  "#aaffc3", "#808000", "#ffd8b1", "#000075", "#808080"
+];
+
+var mapaCoresSubregiao = {};
+var corIndex = 0;
+
+function corPorSubregiao(nomeSubregiao) {
+  if (!nomeSubregiao || nomeSubregiao === "Sem Rota") return "#cccccc"; 
+  if (!mapaCoresSubregiao[nomeSubregiao]) {
+    mapaCoresSubregiao[nomeSubregiao] = paletaCores[corIndex % paletaCores.length];
+    corIndex++;
+  }
+  return mapaCoresSubregiao[nomeSubregiao];
+}
+
+
+function estiloCinzaClaro(){ 
+  return { color: "#aaa", weight: 1, fillColor: "#e8eaed", fillOpacity: 0.6 }; 
+}
+
+function estiloOculto(){ return { color: "transparent", weight: 0, fillOpacity: 0 }; }
+
+function atualizarDropdown(idSelect, lista, textoDefault) {
+  var select = document.getElementById(idSelect);
+  select.innerHTML = `<option value="">${textoDefault}</option>`;
+  [...new Set(lista)].sort().forEach(item => {
+    var option = document.createElement("option"); option.value = item; option.text = item;
+    select.appendChild(option);
+  });
+}
+
+function atualizarPainelLateral(dadosAgrupados, mostrar) {
+  var painel = document.getElementById("painel-lateral");
+  var conteudo = document.getElementById("conteudo-painel");
+
+  if (!mostrar) {
+    painel.style.display = "none";
+    return;
+  }
+
+  painel.style.display = "block";
+  conteudo.innerHTML = ""; 
+
+  var subregioes = Object.keys(dadosAgrupados).sort();
+
+  if (subregioes.length === 0) {
+    conteudo.innerHTML = "<p style='color: #888; margin-top:15px;'>Nenhuma cidade encontrada.</p>";
+    return;
+  }
+
+  subregioes.forEach(sub => {
+    var divSub = document.createElement("div");
+    var h4 = document.createElement("h4");
+    
+    h4.style.borderLeft = "5px solid " + corPorSubregiao(sub);
+    h4.style.paddingLeft = "8px";
+    h4.textContent = sub;
+    divSub.appendChild(h4);
+
+    var ul = document.createElement("ul");
+    dadosAgrupados[sub].sort().forEach(cidade => {
+      var li = document.createElement("li");
+      li.textContent = cidade;
+      ul.appendChild(li);
+    });
+
+    divSub.appendChild(ul);
+    conteudo.appendChild(divSub);
+  });
+}
+
+function criarConteudoPopup(layer) {
+  var nomeMuniOriginal = layer.feature.properties[campoNomeMun];
+  var nomeNorm = normalizarNome(nomeMuniOriginal);
+  var dados = dictMunicipios[nomeNorm];
+  
+  var rota = (dados && dados.subregiao) ? dados.subregiao : "Sem Rota";
+  var unidade = (dados && dados.unidade) ? dados.unidade : "Não Cadastrada";
+  
+  return `<b>Unidade:</b> ${unidade}<br><b>Rota:</b> ${rota}<br><b>Município:</b> ${nomeMuniOriginal}`;
+}
+
+fetch("SP_Municipios__FeaturesToJSO.geojson")
+.then(res => res.json())
+.then(data => {
+  camadaMunicipios = L.geoJSON(data, {
+    style: estiloOculto,
+    onEachFeature: function(feature, layer) { 
+      layer.bindPopup(criarConteudoPopup); 
+    }
+  }).addTo(map);
+  listaTodosMunicipios = data.features.map(f => f.properties[campoNomeMun]);
+});
+
+fetch('https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/efetividade_Ge_FeaturesToJSO.json')
+.then(res => res.json())
+.then(topoUnidades => {
+  var objectName = Object.keys(topoUnidades.objects)[0];
+  var geoUnidades = topojson.feature(topoUnidades, topoUnidades.objects[objectName]);
+  var propriedades = geoUnidades.features[0].properties;
+  var campoNomeUnidade = Object.keys(propriedades).find(k => k.toLowerCase().includes("unid")) || Object.keys(propriedades)[0];
+
+  var unidadesFiltradas = geoUnidades.features.filter(f => {
+      var codigo = String(f.properties[campoNomeUnidade]).trim();
+      return listaTodasUnidades.includes(codigo);
+  });
+
+  camadaUnidades = L.geoJSON(unidadesFiltradas, {
+    style: estiloOculto,
+    onEachFeature: function(feature, layer) { 
+      layer.bindPopup("Fronteira da Unidade: " + feature.properties[campoNomeUnidade]); 
+    }
+  }).addTo(map);
+});
+
+document.getElementById("filtroUF").addEventListener("change", function(e){
+  var uf = e.target.value;
+  if (uf === "SP") {
+    
+    if(camadaMunicipios) camadaMunicipios.eachLayer(layer => layer.setStyle(estiloCinzaClaro()));
+    if(camadaUnidades) camadaUnidades.eachLayer(layer => layer.setStyle({ color: "red", weight: 3, fill: false }));
+    map.setView([-22.5, -48], 7);
+    
+    atualizarDropdown("filtroUnidade", listaTodasUnidades, "Selecione uma unidade");
+    atualizarDropdown("filtroSubregiao", [], "Selecione uma rota");
+    atualizarDropdown("filtroMunicipio", listaTodosMunicipios, "Selecione um município");
+    atualizarPainelLateral({}, false); 
+  } else {
+    if(camadaMunicipios) camadaMunicipios.eachLayer(layer => layer.setStyle(estiloOculto()));
+    if(camadaUnidades) camadaUnidades.eachLayer(layer => layer.setStyle(estiloOculto()));
+    atualizarDropdown("filtroUnidade", [], "Selecione uma unidade");
+    atualizarDropdown("filtroSubregiao", [], "Selecione uma rota");
+    atualizarDropdown("filtroMunicipio", [], "Selecione um município");
+    atualizarPainelLateral({}, false); 
+  }
+});
+
+function processarMapaPorUnidadeESubregiao() {
+  var unidadeSel = document.getElementById("filtroUnidade").value;
+  var subregiaoSel = document.getElementById("filtroSubregiao").value;
+
+  if (!unidadeSel) {
+    atualizarPainelLateral({}, false);
+    return;
+  }
+
+  var unidadeSelecionadaGeo = null;
+  var subregioesEncontradas = [];
+  var municipiosParaDropdown = [];
+  var camadasParaZoom = []; 
+  var dadosParaPainel = {};
+
+  camadaUnidades.eachLayer(function(layer){
+    var prop = layer.feature.properties;
+    var campo = Object.keys(prop).find(k => k.toLowerCase().includes("unid")) || Object.keys(prop)[0];
+    var codigo = String(prop[campo]).trim();
+
+    if(codigo === unidadeSel){
+      layer.setStyle({ color:"black", weight:4 });
+      unidadeSelecionadaGeo = layer.feature;
+    } else {
+      layer.setStyle({ color:"transparent", weight:0 });
+    }
+  });
+
+  camadaMunicipios.eachLayer(function(layer){
+    var municipioGeo = layer.feature;
+    var nomeMuniOriginal = municipioGeo.properties[campoNomeMun];
+    var nomeNorm = normalizarNome(nomeMuniOriginal);
+    var dadosMuni = dictMunicipios[nomeNorm]; 
+    var estaDentro = false;
+
+    if (unidadeSelecionadaGeo) {
+        var centroDoMunicipio = turf.centroid(municipioGeo);
+        estaDentro = turf.booleanPointInPolygon(centroDoMunicipio, unidadeSelecionadaGeo);
+    }
+
+    if(estaDentro){
+      var nomeSubApresentacao = (dadosMuni && dadosMuni.subregiao) ? dadosMuni.subregiao : "Sem Rota";
+      subregioesEncontradas.push(nomeSubApresentacao);
+
+      if (!subregiaoSel || subregiaoSel === nomeSubApresentacao) {
+        
+        layer.setStyle({ 
+          color: "#444", 
+          weight: 1, 
+          fillColor: corPorSubregiao(nomeSubApresentacao), 
+          fillOpacity: 0.5
+        });
+        municipiosParaDropdown.push(nomeMuniOriginal);
+        camadasParaZoom.push(layer); 
+
+        if (!dadosParaPainel[nomeSubApresentacao]) dadosParaPainel[nomeSubApresentacao] = [];
+        dadosParaPainel[nomeSubApresentacao].push(nomeMuniOriginal);
+
+      } else {
+        layer.setStyle(estiloOculto());
+      }
+    } else {
+      layer.setStyle(estiloOculto());
+    }
+  });
+
+  if (!subregiaoSel) {
+    atualizarDropdown("filtroSubregiao", subregioesEncontradas, "Selecione uma rota");
+    camadaUnidades.eachLayer(function(layer) { if(layer.feature === unidadeSelecionadaGeo) map.fitBounds(layer.getBounds()); });
+  } else {
+    if (camadasParaZoom.length > 0) {
+      var grupo = new L.featureGroup(camadasParaZoom);
+      map.fitBounds(grupo.getBounds());
+    }
+  }
+
+  atualizarDropdown("filtroMunicipio", municipiosParaDropdown, "Selecione um município");
+  atualizarPainelLateral(dadosParaPainel, true);
+}
+
+document.getElementById("filtroUnidade").addEventListener("change", function(e){
+  var unidade = e.target.value;
+  document.getElementById("filtroSubregiao").value = "";
+  document.getElementById("filtroMunicipio").value = "";
+  
+  if(!unidade){ document.getElementById("filtroUF").dispatchEvent(new Event("change")); return; }
+  processarMapaPorUnidadeESubregiao();
+});
+
+document.getElementById("filtroSubregiao").addEventListener("change", function(e){
+  document.getElementById("filtroMunicipio").value = "";
+  processarMapaPorUnidadeESubregiao();
+});
+
+document.getElementById("filtroMunicipio").addEventListener("change", function(e){
+  var cidade = e.target.value;
+  if (!camadaMunicipios) return;
+  var unidadeSelecionada = document.getElementById("filtroUnidade").value;
+
+  if(unidadeSelecionada) { processarMapaPorUnidadeESubregiao(); }
+
+  if (cidade) {
+    camadaMunicipios.eachLayer(function(layer){
+      if(layer.feature.properties[campoNomeMun] === cidade){
+        layer.setStyle({ color: "#ffcc00", weight: 5, fillOpacity: 0.8 });
+        map.fitBounds(layer.getBounds());
+        layer.openPopup();
+      }
+    });
+  }
+});
+
+document.getElementById("btnLimparUF").addEventListener("click", function() { var s = document.getElementById("filtroUF"); s.value = ""; s.dispatchEvent(new Event("change")); });
+document.getElementById("btnLimparUnidade").addEventListener("click", function() { var s = document.getElementById("filtroUnidade"); s.value = ""; s.dispatchEvent(new Event("change")); });
+document.getElementById("btnLimparSubregiao").addEventListener("click", function() { var s = document.getElementById("filtroSubregiao"); s.value = ""; s.dispatchEvent(new Event("change")); });
+document.getElementById("btnLimparMunicipio").addEventListener("click", function() { var s = document.getElementById("filtroMunicipio"); s.value = ""; s.dispatchEvent(new Event("change")); });
+
+</script>
+</body>
+</html>
