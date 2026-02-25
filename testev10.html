@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Painel Mapa Teste</title>
+<title>Painel Mapa de Logística - SP & RJ</title>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -76,13 +76,14 @@
 </head>
 <body>
 
-<h3>Painel de Unidades e Rotas (Subregiões) - SP</h3>
+<h3>Painel de Unidades e Rotas (Subregiões)</h3>
 
 <div class="controles">
   <div class="grupo-filtro">
     <select id="filtroUF">
       <option value="">Selecione a UF</option>
       <option value="SP">SP</option>
+      <option value="RJ">RJ</option>
     </select>
     <button id="btnLimparUF">Limpar UF</button>
   </div>
@@ -96,7 +97,7 @@
 
   <div class="grupo-filtro">
     <select id="filtroSubregiao">
-      <option value="">Selecione uma rota/subregião</option>
+      <option value="">Selecione uma rota</option>
     </select>
     <button id="btnLimparSubregiao">Limpar Rota</button>
   </div>
@@ -111,7 +112,6 @@
 
 <div class="container-principal">
   <div id="map"></div>
-
   <div id="painel-lateral">
     <h3 style="margin: 0; padding-bottom: 10px; border-bottom: 2px solid #ccc;">Lista de Cidades</h3>
     <div id="conteudo-painel"></div>
@@ -119,41 +119,13 @@
 </div>
 
 <script>
-
-var dictMunicipios = {};
-
+// ==========================================
+// CONFIGURAÇÕES GERAIS E FUNÇÕES AUXILIARES
+// ==========================================
 function normalizarNome(nome) {
   if(!nome) return "";
   return nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
 }
-
-fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/refs/heads/main/csvjson.json")
-  .then(res => res.json())
-  .then(dadosPlanilha => {
-    dadosPlanilha.forEach(d => {
-      dictMunicipios[normalizarNome(d.cidade)] = {
-        subregiao: d.subregiao,
-        unidade: d.Unidade
-      };
-    });
-  })
-  .catch(err => console.error("Erro ao carregar csvjson.json", err));
-
-var map = L.map('map').setView([-22.5, -48], 7);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap'
-}).addTo(map);
-
-var camadaMunicipios;
-var camadaUnidades;
-
-var campoNomeMun = "NM_MUN";
-var listaTodosMunicipios = []; 
-var listaTodasUnidades = [
-  "SPO","SPS","CPS","GRU","RAO","SPC","ABC",
-  "SOD","BAU","SPL","SJK","LIT","LRE","SJP","PPB"
-];
 
 var paletaCores = [
   "#e6194b", "#3cb44b", "#ffe119", "#4363d8", "#f58231",
@@ -174,19 +146,17 @@ function corPorSubregiao(nomeSubregiao) {
   return mapaCoresSubregiao[nomeSubregiao];
 }
 
-
-function estiloCinzaClaro(){ 
-  return { color: "#aaa", weight: 1, fillColor: "#e8eaed", fillOpacity: 0.6 }; 
-}
-
+function estiloCinzaClaro(){ return { color: "#aaa", weight: 1, fillColor: "#e8eaed", fillOpacity: 0.6 }; }
 function estiloOculto(){ return { color: "transparent", weight: 0, fillOpacity: 0 }; }
 
 function atualizarDropdown(idSelect, lista, textoDefault) {
   var select = document.getElementById(idSelect);
   select.innerHTML = `<option value="">${textoDefault}</option>`;
   [...new Set(lista)].sort().forEach(item => {
-    var option = document.createElement("option"); option.value = item; option.text = item;
-    select.appendChild(option);
+    if (item) {
+        var option = document.createElement("option"); option.value = item; option.text = item;
+        select.appendChild(option);
+    }
   });
 }
 
@@ -230,130 +200,338 @@ function atualizarPainelLateral(dadosAgrupados, mostrar) {
   });
 }
 
-function criarConteudoPopup(layer) {
-  var nomeMuniOriginal = layer.feature.properties[campoNomeMun];
-  var nomeNorm = normalizarNome(nomeMuniOriginal);
-  var dados = dictMunicipios[nomeNorm];
-  
-  var rota = (dados && dados.subregiao) ? dados.subregiao : "Sem Rota";a
-  var unidade = (dados && dados.unidade) ? dados.unidade : "Não Cadastrada";
-  
-  return `<b>Unidade:</b> ${unidade}<br><b>Rota:</b> ${rota}<br><b>Município:</b> ${nomeMuniOriginal}`;
-}
+// ==========================================
+// INICIALIZAÇÃO DO MAPA
+// ==========================================
+var map = L.map('map').setView([-22.5, -48], 7);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
 
-fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/SP_Municipios__FeaturesToJSO.geojson")
-.then(res => res.json())
-.then(data => {
-  camadaMunicipios = L.geoJSON(data, {
-    style: estiloOculto,
-    onEachFeature: function(feature, layer) { 
-      layer.bindPopup(criarConteudoPopup); 
-    }
-  }).addTo(map);
-  listaTodosMunicipios = data.features.map(f => f.properties[campoNomeMun]);
-});
+// ==========================================
+// DADOS SP
+// ==========================================
+var dictMunicipiosSP = {};
+var camadaMunicipiosSP = null;
+var camadaUnidadesSP = null;
+var listaTodosMunicipiosSP = []; 
+var listaTodasUnidadesSP = [
+  "SPO","SPS","CPS","GRU","RAO","SPC","ABC",
+  "SOD","BAU","SPL","SJK","LIT","LRE","SJP","PPB"
+];
 
-fetch('https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/efetividade_Ge_FeaturesToJSO.json')
-.then(res => res.json())
-.then(topoUnidades => {
-  var objectName = Object.keys(topoUnidades.objects)[0];
-  var geoUnidades = topojson.feature(topoUnidades, topoUnidades.objects[objectName]);
-  var propriedades = geoUnidades.features[0].properties;
-  var campoNomeUnidade = Object.keys(propriedades).find(k => k.toLowerCase().includes("unid")) || Object.keys(propriedades)[0];
-
-  var unidadesFiltradas = geoUnidades.features.filter(f => {
-      var codigo = String(f.properties[campoNomeUnidade]).trim();
-      return listaTodasUnidades.includes(codigo);
+fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/refs/heads/main/csvjson.json")
+  .then(res => res.json())
+  .then(dadosPlanilha => {
+    dadosPlanilha.forEach(d => {
+      dictMunicipiosSP[normalizarNome(d.cidade)] = { subregiao: d.subregiao, unidade: d.Unidade };
+    });
   });
 
-  camadaUnidades = L.geoJSON(unidadesFiltradas, {
-    style: estiloOculto,
-    onEachFeature: function(feature, layer) { 
-      layer.bindPopup("Fronteira da Unidade: " + feature.properties[campoNomeUnidade]); 
-    }
-  }).addTo(map);
+fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/SP_Municipios__FeaturesToJSO.geojson")
+  .then(res => res.json())
+  .then(data => {
+    camadaMunicipiosSP = L.geoJSON(data, {
+      style: estiloOculto,
+      onEachFeature: function(feature, layer) { 
+        var nomeNorm = normalizarNome(feature.properties.NM_MUN);
+        var dados = dictMunicipiosSP[nomeNorm];
+        var rota = (dados && dados.subregiao) ? dados.subregiao : "Sem Rota";
+        var unidade = (dados && dados.unidade) ? dados.unidade : "Não Cadastrada";
+        layer.bindPopup(`<b>Unidade:</b> ${unidade}<br><b>Rota:</b> ${rota}<br><b>Município:</b> ${feature.properties.NM_MUN}`); 
+      }
+    });
+    listaTodosMunicipiosSP = data.features.map(f => f.properties.NM_MUN);
+  });
+
+fetch('https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/efetividade_Ge_FeaturesToJSO.json')
+  .then(res => res.json())
+  .then(topoUnidades => {
+    var objectName = Object.keys(topoUnidades.objects)[0];
+    var geoUnidades = topojson.feature(topoUnidades, topoUnidades.objects[objectName]);
+    var campoNomeUnidade = Object.keys(geoUnidades.features[0].properties).find(k => k.toLowerCase().includes("unid")) || Object.keys(geoUnidades.features[0].properties)[0];
+
+    var unidadesFiltradas = geoUnidades.features.filter(f => listaTodasUnidadesSP.includes(String(f.properties[campoNomeUnidade]).trim()));
+
+    camadaUnidadesSP = L.geoJSON(unidadesFiltradas, {
+      style: estiloOculto,
+      onEachFeature: function(feature, layer) { 
+        layer.bindPopup("Fronteira da Unidade: " + feature.properties[campoNomeUnidade]); 
+      }
+    });
+  });
+
+// ==========================================
+// DADOS RJ
+// ==========================================
+var dictMunicipiosRJ = {};
+var camadaMunicipiosRJ = null;
+var camadaUnidadesRJ = null;
+var listaTodosMunicipiosRJ = [];
+
+const dadosRJ = [
+  { cidade: "ANGRA DOS REIS", Unidade: "QMA", rota: "QMA02" },
+  { cidade: "BELFORD ROXO", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "CACHOEIRAS DE MACACU", Unidade: "QMA", rota: "QMA04" },
+  { cidade: "DUQUE DE CAXIAS", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "FRONTIN", Unidade: "QMA", rota: "QMA04" }, 
+  { cidade: "GUAPIMIRIM", Unidade: "QMA", rota: "QMA04" },
+  { cidade: "ITAGUAI", Unidade: "QMA", rota: "QMA02" },
+  { cidade: "JAPERI", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "JAPUIBA", Unidade: "QMA", rota: "QMA02" }, 
+  { cidade: "MAGE", Unidade: "QMA", rota: "QMA04" },
+  { cidade: "MANGARATIBA", Unidade: "QMA", rota: "QMA02" },
+  { cidade: "MESQUITA", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "NILOPOLIS", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "NOVA IGUACU", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "PAPUCAIA", Unidade: "QMA", rota: "QMA04" }, 
+  { cidade: "PARACAMBI", Unidade: "QMA", rota: "QMA04" },
+  { cidade: "QUEIMADOS", Unidade: "QMA", rota: "QMA03" },
+  { cidade: "RIO DE JANEIRO", Unidade: "QMA", rota: "QMA01" },
+  { cidade: "SAO JOAO DE MERETI", Unidade: "QMA", rota: "QMA03" }, 
+  { cidade: "SEROPEDICA", Unidade: "QMA", rota: "QMA02" },
+  { cidade: "APERIBE", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "ARARUAMA", Unidade: "AMA", rota: "AMA01" },
+  { cidade: "AREAL", Unidade: "TRS", rota: "TRS02" },
+  { cidade: "ARMACAO DOS BUZIOS", Unidade: "AMA", rota: "AMA02" },
+  { cidade: "ARRAIAL DO CABO", Unidade: "AMA", rota: "AMA02" },
+  { cidade: "ARROZAL", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "BARRA DE SAO JOAO", Unidade: "AMA", rota: "AMA03" },
+  { cidade: "BARRA DO PIRAI", Unidade: "VRE", rota: "VRE01" },
+  { cidade: "BARRA MANSA", Unidade: "VRE", rota: "VRE03" },
+  { cidade: "BOM JARDIM", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "BOM JESUS DO ITABAPOANA", Unidade: "CGZ", rota: "CGZ04" },
+  { cidade: "CABECEIRA DO BRANDAO", Unidade: "VRE", rota: "VRE02" },
+  { cidade: "CABO FRIO", Unidade: "AMA", rota: "AMA02" },
+  { cidade: "CAMBUCI", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "CAMPOS DOS GOYTACAZES", Unidade: "CGZ", rota: "CGZ01" },
+  { cidade: "CANTAGALO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "CARAPEBUS", Unidade: "AMA", rota: "AMA04" },
+  { cidade: "CARDOSO MOREIRA", Unidade: "CGZ", rota: "CGZ02" },
+  { cidade: "CARMO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "CASIMIRO DE ABREU", Unidade: "AMA", rota: "AMA04" },
+  { cidade: "COMENDADOR", Unidade: "TRS", rota: "TRS01" },
+  { cidade: "COMENDADOR LEVY GASPARIAN", Unidade: "TRS", rota: "TRS01" },
+  { cidade: "CONCEICAO DE MACABU", Unidade: "AMA", rota: "AMA04" },
+  { cidade: "CORDEIRO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "DUAS BARRAS", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "GUARATIBA", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "IGUABA GRANDE", Unidade: "AMA", rota: "AMA03" },
+  { cidade: "ITABORAI", Unidade: "NIT", rota: "NIT03" },
+  { cidade: "ITALVA", Unidade: "CGZ", rota: "CGZ04" },
+  { cidade: "ITAOCARA", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "ITAPERUNA", Unidade: "CGZ", rota: "CGZ04" },
+  { cidade: "ITATIAIA", Unidade: "VRE", rota: "VRE03" },
+  { cidade: "LAJE DO MURIAE", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "LARANJAIS", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "LIDICE", Unidade: "VRE", rota: "VRE02" },
+  { cidade: "MACAE", Unidade: "AMA", rota: "AMA04" },
+  { cidade: "MACUCO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "MARICA", Unidade: "AMA", rota: "AMA03" },
+  { cidade: "MENDES", Unidade: "VRE", rota: "VRE01" },
+  { cidade: "MIGUEL PEREIRA", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "MIRACEMA", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "MONUMENTO", Unidade: "VRE", rota: "VRE02" },
+  { cidade: "NATIVIDADE", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "NITEROI", Unidade: "NIT", rota: "NIT01" },
+  { cidade: "NOVA FRIBURGO", Unidade: "TRS", rota: "TRS02" },
+  { cidade: "PARAIBA DO SUL", Unidade: "TRS", rota: "TRS01" },
+  { cidade: "PARATY", Unidade: "DQ0", rota: "DQ03" },
+  { cidade: "PATY DO ALFERES", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "PETROPOLIS", Unidade: "TRS", rota: "TRS02" },
+  { cidade: "PINHEIRAL", Unidade: "VRE", rota: "VRE03" },
+  { cidade: "PIRAI", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "PORCIUNCULA", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "PORTO REAL", Unidade: "VRE", rota: "VRE03" },
+  { cidade: "QUATIS", Unidade: "VRE", rota: "VRE03" },
+  { cidade: "QUISSAMA", Unidade: "AMA", rota: "AMA04" },
+  { cidade: "RESENDE", Unidade: "VRE", rota: "VRE03" },
+  { cidade: "RIO BONITO", Unidade: "NIT", rota: "NIT02" },
+  { cidade: "RIO CLARO", Unidade: "VRE", rota: "VRE02" },
+  { cidade: "RIO DAS FLORES", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "RIO DAS OSTRAS", Unidade: "AMA", rota: "AMA02" },
+  { cidade: "SANTA MARIA MADALENA", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "SANTO ANTONIO DE PADUA", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "SAO FIDELIS", Unidade: "CGZ", rota: "CGZ04" },
+  { cidade: "SAO FRANCISCO DE ITABAPOANA", Unidade: "CGZ", rota: "CGZ02" },
+  { cidade: "SAO GONCALO", Unidade: "NIT", rota: "NIT04" },
+  { cidade: "SAO JOAO DA BARRA", Unidade: "CGZ", rota: "CGZ02" },
+  { cidade: "SAO JOSE DE UBA", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "SAO JOSE DO RIBEIRAO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "SAO JOSE DO VALE DO RIO PRETO", Unidade: "TRS", rota: "TRS02" },
+  { cidade: "SAO PEDRO DA ALDEIA", Unidade: "AMA", rota: "AMA03" },
+  { cidade: "SAO SEBASTIAO DO ALTO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "SAPUCAIA", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "SAQUAREMA", Unidade: "AMA", rota: "AMA01" },
+  { cidade: "SILVA JARDIM", Unidade: "AMA", rota: "AMA04" },
+  { cidade: "SUMIDOURO", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "TANGUA", Unidade: "NIT", rota: "NIT04" },
+  { cidade: "TERESOPOLIS", Unidade: "TRS", rota: "TRS02" },
+  { cidade: "TRAJANO DE MORAES", Unidade: "TRS", rota: "TRS03" },
+  { cidade: "TRES RIOS", Unidade: "TRS", rota: "TRS01" },
+  { cidade: "VALENCA", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "VARRE SAI", Unidade: "CGZ", rota: "CGZ03" },
+  { cidade: "VASSOURAS", Unidade: "VRE", rota: "VRE04" },
+  { cidade: "VOLTA REDONDA", Unidade: "VRE", rota: "VRE03" }
+];
+
+var listaTodasUnidadesRJ = [...new Set(dadosRJ.map(item => item.Unidade))].filter(Boolean);
+
+dadosRJ.forEach(d => {
+  dictMunicipiosRJ[normalizarNome(d.cidade)] = { subregiao: d.rota, unidade: d.Unidade };
 });
+
+fetch("https://raw.githubusercontent.com/lucascamargo-cell/powerbi-mapas/main/RJ_Municipios_2024.geojson")
+  .then(res => res.json())
+  .then(data => {
+    
+    let unitFeatures = {}; 
+    let geojsonFeaturesRJ = [];
+
+    camadaMunicipiosRJ = L.geoJSON(data, {
+      style: estiloOculto,
+      onEachFeature: function(feature, layer) { 
+        var propName = feature.properties.NM_MUN ? "NM_MUN" : Object.keys(feature.properties)[0];
+        var nomeOriginal = feature.properties[propName];
+        var nomeNorm = normalizarNome(nomeOriginal);
+        
+        listaTodosMunicipiosRJ.push(nomeOriginal);
+        feature.properties.NOME_MAPA = nomeOriginal; 
+
+        var dados = dictMunicipiosRJ[nomeNorm];
+        var rota = (dados && dados.subregiao) ? dados.subregiao : "Sem Rota";
+        var unidade = (dados && dados.unidade) ? dados.unidade : "Não Cadastrada";
+        
+        layer.bindPopup(`<b>Unidade:</b> ${unidade}<br><b>Rota:</b> ${rota}<br><b>Município:</b> ${nomeOriginal}`); 
+
+        if (dados && dados.unidade) {
+          let codUnidade = dados.unidade;
+          try {
+              if (!unitFeatures[codUnidade]) {
+                  unitFeatures[codUnidade] = JSON.parse(JSON.stringify(feature)); 
+                  unitFeatures[codUnidade].properties = { UNIDADE: codUnidade };
+              } else {
+                  unitFeatures[codUnidade] = turf.union(unitFeatures[codUnidade], feature);
+                  
+                  unitFeatures[codUnidade].properties = { UNIDADE: codUnidade };
+              }
+          } catch (e) {
+              console.error("Turf.js Error - Could not merge:", nomeOriginal, e);
+          }
+        }
+      }
+    });
+
+    Object.keys(unitFeatures).forEach(key => {
+        geojsonFeaturesRJ.push(unitFeatures[key]);
+    });
+
+    camadaUnidadesRJ = L.geoJSON({ type: "FeatureCollection", features: geojsonFeaturesRJ }, {
+        style: estiloOculto,
+        onEachFeature: function(feature, layer) { 
+            layer.bindPopup("Fronteira da Unidade RJ: " + feature.properties.UNIDADE); 
+        }
+    });
+
+    if (document.getElementById("filtroUF").value === "RJ") {
+      document.getElementById("filtroUF").dispatchEvent(new Event("change"));
+    }
+  })
+  .catch(err => console.error("Error loading RJ GeoJSON. Please check the URL.", err));
+
+
+// ==========================================
+// LÓGICA DE FILTROS E CONTROLE DE CAMADAS
+// ==========================================
+
+function obterCamadasAtivas() {
+  var uf = document.getElementById("filtroUF").value;
+  if (uf === "SP") return { mun: camadaMunicipiosSP, unid: camadaUnidadesSP, dict: dictMunicipiosSP, propMun: "NM_MUN", listaUnidades: listaTodasUnidadesSP, listaCidades: listaTodosMunicipiosSP };
+  if (uf === "RJ") return { mun: camadaMunicipiosRJ, unid: camadaUnidadesRJ, dict: dictMunicipiosRJ, propMun: "NOME_MAPA", listaUnidades: listaTodasUnidadesRJ, listaCidades: listaTodosMunicipiosRJ };
+  return { mun: null, unid: null, dict: null, propMun: null, listaUnidades: [], listaCidades: [] };
+}
 
 document.getElementById("filtroUF").addEventListener("change", function(e){
   var uf = e.target.value;
+  
+  if(camadaMunicipiosSP && map.hasLayer(camadaMunicipiosSP)) map.removeLayer(camadaMunicipiosSP);
+  if(camadaUnidadesSP && map.hasLayer(camadaUnidadesSP)) map.removeLayer(camadaUnidadesSP);
+  if(camadaMunicipiosRJ && map.hasLayer(camadaMunicipiosRJ)) map.removeLayer(camadaMunicipiosRJ);
+  if(camadaUnidadesRJ && map.hasLayer(camadaUnidadesRJ)) map.removeLayer(camadaUnidadesRJ);
+
+  var camadas = obterCamadasAtivas();
+
   if (uf === "SP") {
-    
-    if(camadaMunicipios) camadaMunicipios.eachLayer(layer => layer.setStyle(estiloCinzaClaro()));
-    if(camadaUnidades) camadaUnidades.eachLayer(layer => layer.setStyle({ color: "red", weight: 3, fill: false }));
+    if(camadas.mun) camadas.mun.addTo(map).eachLayer(layer => layer.setStyle(estiloCinzaClaro()));
+    if(camadas.unid) camadas.unid.addTo(map).eachLayer(layer => layer.setStyle({ color: "red", weight: 3, fill: false }));
     map.setView([-22.5, -48], 7);
     
-    atualizarDropdown("filtroUnidade", listaTodasUnidades, "Selecione uma unidade");
+    atualizarDropdown("filtroUnidade", camadas.listaUnidades, "Selecione uma unidade");
     atualizarDropdown("filtroSubregiao", [], "Selecione uma rota");
-    atualizarDropdown("filtroMunicipio", listaTodosMunicipios, "Selecione um município");
-    atualizarPainelLateral({}, false); 
+    atualizarDropdown("filtroMunicipio", camadas.listaCidades, "Selecione um município");
+  } 
+  else if (uf === "RJ") {
+    if(camadas.mun) camadas.mun.addTo(map).eachLayer(layer => layer.setStyle(estiloCinzaClaro()));
+    if(camadas.unid) camadas.unid.addTo(map).eachLayer(layer => layer.setStyle({ color: "#555", weight: 3, fill: false }));
+    map.setView([-22.90, -43.20], 8);
+    
+    atualizarDropdown("filtroUnidade", camadas.listaUnidades, "Selecione uma unidade");
+    atualizarDropdown("filtroSubregiao", [], "Selecione uma rota");
+    atualizarDropdown("filtroMunicipio", camadas.listaCidades, "Selecione um município");
   } else {
-    if(camadaMunicipios) camadaMunicipios.eachLayer(layer => layer.setStyle(estiloOculto()));
-    if(camadaUnidades) camadaUnidades.eachLayer(layer => layer.setStyle(estiloOculto()));
     atualizarDropdown("filtroUnidade", [], "Selecione uma unidade");
     atualizarDropdown("filtroSubregiao", [], "Selecione uma rota");
     atualizarDropdown("filtroMunicipio", [], "Selecione um município");
-    atualizarPainelLateral({}, false); 
   }
+  atualizarPainelLateral({}, false); 
 });
 
 function processarMapaPorUnidadeESubregiao() {
   var unidadeSel = document.getElementById("filtroUnidade").value;
   var subregiaoSel = document.getElementById("filtroSubregiao").value;
+  var camadas = obterCamadasAtivas();
 
-  if (!unidadeSel) {
+  if (!unidadeSel || !camadas.mun || !camadas.unid) {
     atualizarPainelLateral({}, false);
     return;
   }
 
-  var unidadeSelecionadaGeo = null;
+  var layerUnidadeSelecionada = null; 
   var subregioesEncontradas = [];
   var municipiosParaDropdown = [];
   var camadasParaZoom = []; 
   var dadosParaPainel = {};
 
-  camadaUnidades.eachLayer(function(layer){
+  camadas.unid.eachLayer(function(layer){
     var prop = layer.feature.properties;
-    var campo = Object.keys(prop).find(k => k.toLowerCase().includes("unid")) || Object.keys(prop)[0];
+    var campo = Object.keys(prop).find(k => k.toLowerCase().includes("unid") || k === "UNIDADE") || Object.keys(prop)[0];
     var codigo = String(prop[campo]).trim();
 
     if(codigo === unidadeSel){
-      layer.setStyle({ color:"black", weight:4 });
-      unidadeSelecionadaGeo = layer.feature;
+      layer.setStyle({ color: "black", weight: 5, fillOpacity: 0 }); 
+      layerUnidadeSelecionada = layer;
     } else {
       layer.setStyle({ color:"transparent", weight:0 });
     }
   });
 
-  camadaMunicipios.eachLayer(function(layer){
+  camadas.mun.eachLayer(function(layer){
     var municipioGeo = layer.feature;
-    var nomeMuniOriginal = municipioGeo.properties[campoNomeMun];
+    var nomeMuniOriginal = municipioGeo.properties[camadas.propMun] || municipioGeo.properties["NM_MUN"];
     var nomeNorm = normalizarNome(nomeMuniOriginal);
-    var dadosMuni = dictMunicipios[nomeNorm]; 
-    var estaDentro = false;
+    var dadosMuni = camadas.dict[nomeNorm]; 
 
-    if (unidadeSelecionadaGeo) {
-        var centroDoMunicipio = turf.centroid(municipioGeo);
-        estaDentro = turf.booleanPointInPolygon(centroDoMunicipio, unidadeSelecionadaGeo);
-    }
+    var estaDentro = (dadosMuni && dadosMuni.unidade === unidadeSel);
 
     if(estaDentro){
       var nomeSubApresentacao = (dadosMuni && dadosMuni.subregiao) ? dadosMuni.subregiao : "Sem Rota";
       subregioesEncontradas.push(nomeSubApresentacao);
 
       if (!subregiaoSel || subregiaoSel === nomeSubApresentacao) {
-        
-        layer.setStyle({ 
-          color: "#444", 
-          weight: 1, 
-          fillColor: corPorSubregiao(nomeSubApresentacao), 
-          fillOpacity: 0.5
-        });
+        layer.setStyle({ color: "#444", weight: 1, fillColor: corPorSubregiao(nomeSubApresentacao), fillOpacity: 0.5 });
         municipiosParaDropdown.push(nomeMuniOriginal);
         camadasParaZoom.push(layer); 
 
         if (!dadosParaPainel[nomeSubApresentacao]) dadosParaPainel[nomeSubApresentacao] = [];
         dadosParaPainel[nomeSubApresentacao].push(nomeMuniOriginal);
-
       } else {
         layer.setStyle(estiloOculto());
       }
@@ -362,9 +540,19 @@ function processarMapaPorUnidadeESubregiao() {
     }
   });
 
+  if (layerUnidadeSelecionada) {
+    layerUnidadeSelecionada.bringToFront();
+  }
+
+  // FIX: Fallback zoom logic ensures the map frames the selected area even if the unit geometry fails to calculate bounds.
   if (!subregiaoSel) {
     atualizarDropdown("filtroSubregiao", subregioesEncontradas, "Selecione uma rota");
-    camadaUnidades.eachLayer(function(layer) { if(layer.feature === unidadeSelecionadaGeo) map.fitBounds(layer.getBounds()); });
+    if (layerUnidadeSelecionada && typeof layerUnidadeSelecionada.getBounds === "function") {
+      map.fitBounds(layerUnidadeSelecionada.getBounds());
+    } else if (camadasParaZoom.length > 0) {
+      var fallbackGrupo = new L.featureGroup(camadasParaZoom);
+      map.fitBounds(fallbackGrupo.getBounds());
+    }
   } else {
     if (camadasParaZoom.length > 0) {
       var grupo = new L.featureGroup(camadasParaZoom);
@@ -377,29 +565,28 @@ function processarMapaPorUnidadeESubregiao() {
 }
 
 document.getElementById("filtroUnidade").addEventListener("change", function(e){
-  var unidade = e.target.value;
   document.getElementById("filtroSubregiao").value = "";
   document.getElementById("filtroMunicipio").value = "";
-  
-  if(!unidade){ document.getElementById("filtroUF").dispatchEvent(new Event("change")); return; }
+  if(!e.target.value){ document.getElementById("filtroUF").dispatchEvent(new Event("change")); return; }
   processarMapaPorUnidadeESubregiao();
 });
 
-document.getElementById("filtroSubregiao").addEventListener("change", function(e){
+document.getElementById("filtroSubregiao").addEventListener("change", function(){
   document.getElementById("filtroMunicipio").value = "";
   processarMapaPorUnidadeESubregiao();
 });
 
 document.getElementById("filtroMunicipio").addEventListener("change", function(e){
   var cidade = e.target.value;
-  if (!camadaMunicipios) return;
-  var unidadeSelecionada = document.getElementById("filtroUnidade").value;
-
-  if(unidadeSelecionada) { processarMapaPorUnidadeESubregiao(); }
+  var camadas = obterCamadasAtivas();
+  if (!camadas.mun) return;
+  
+  if(document.getElementById("filtroUnidade").value) processarMapaPorUnidadeESubregiao();
 
   if (cidade) {
-    camadaMunicipios.eachLayer(function(layer){
-      if(layer.feature.properties[campoNomeMun] === cidade){
+    camadas.mun.eachLayer(function(layer){
+      var propNome = layer.feature.properties[camadas.propMun] || layer.feature.properties["NM_MUN"];
+      if(propNome === cidade){
         layer.setStyle({ color: "#ffcc00", weight: 5, fillOpacity: 0.8 });
         map.fitBounds(layer.getBounds());
         layer.openPopup();
